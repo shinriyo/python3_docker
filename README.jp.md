@@ -1,23 +1,23 @@
 # python3_docker
 
-* it is docker setting for Python3
+* Python3のためのDockerコンテナ
 
-## Start container
+## コンテナ開始
 
-first clone the repositpry.
+まずこれをcloneする
 
 ```
 cd python3_docker
 docker-compose up -d --build
 ```
 
-## Connect container
+## コンテナにつなぐ
 
 ```
 docker-compose exec python3 bash
 ```
 
-### Also install
+### pipインストール手順
 
 ```
 python -m pip install numpy
@@ -29,14 +29,14 @@ python -m pip install xlsxwriter
 python -m pip install tornado
 ```
 
-## Check libraries
+## ライブラリ確認
 
 ```
 docker-compose exec python3 bash
 python -m pip list
 ```
 
-## Through out the container
+## このコンテナ消す
 
 ```
 docker-compose down
